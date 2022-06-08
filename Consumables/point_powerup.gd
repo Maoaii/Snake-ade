@@ -20,3 +20,5 @@ func _on_PointPowerup_area_entered(area):
 		# Shift place
 		while area.position == position:
 			position = get_random_pos()
+	if area.name == "Magnet":
+		position = get_random_pos()

@@ -15,9 +15,6 @@ autostart = true
 
 [node name="SpeedDownTimer" type="Timer" parent="."]
 
-[node name="MagnetTimer" type="Timer" parent="."]
-
 [connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]
 [connection signal="timeout" from="SpeedupTimer" to="." method="_on_SpeedupTimer_timeout"]
 [connection signal="timeout" from="SpeedDownTimer" to="." method="_on_SpeedDownTimer_timeout"]
-[connection signal="timeout" from="MagnetTimer" to="." method="_on_MagnetTimer_timeout"]

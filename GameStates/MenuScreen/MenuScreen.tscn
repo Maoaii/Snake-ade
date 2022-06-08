@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/game_title_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://GameStates/Buttons/QuitButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameStates/Buttons/StartButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fonts/highscore_font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://GameStates/MenuScreen/highscore_text.gd" type="Script" id=5]
 
 [node name="Menu_Screen" type="Control"]
 anchor_right = 1.0
@@ -46,3 +48,12 @@ margin_left = -57.5
 margin_top = 62.0
 margin_right = 57.5
 margin_bottom = 109.0
+
+[node name="HighscoreText" type="Label" parent="."]
+margin_left = 169.0
+margin_top = 193.0
+margin_right = 398.0
+margin_bottom = 215.0
+custom_fonts/font = ExtResource( 4 )
+text = "Highscore: XXX"
+script = ExtResource( 5 )

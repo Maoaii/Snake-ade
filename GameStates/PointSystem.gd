@@ -2,7 +2,7 @@ extends Node
 
 
 # Point system
-var points = 0
+var points = 0 setget set_highscore
 var point_modifier = 1
 
 func add_point():
@@ -14,6 +14,9 @@ func reset_points():
 func change_point_modifier(value):
 	point_modifier = value
 
-
 func reset_point_modifier():
 	point_modifier = 1
+
+func set_highscore(new_highscore):
+	if points > Highscore.highscore:
+		Highscore.highscore = points

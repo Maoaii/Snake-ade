@@ -27,8 +27,5 @@ func _on_head_area_entered(area):
 	if area.name == "MagnetPowerup":
 		emit_signal("magnet_powerup")
 		area.queue_free()
-	if area.name == "HalfPowerup":
-		emit_signal("half_powerup")
-		area.queue_free()
 	
 

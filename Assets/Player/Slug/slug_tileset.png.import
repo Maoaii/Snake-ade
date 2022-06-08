@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/half_powerup.png-99e4943755754ac77ab97fa7355e1059.stex"
+path="res://.import/slug_tileset.png-e6dcfbc79358032e0ac315107fab4da3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Consumables/half_powerup.png"
-dest_files=[ "res://.import/half_powerup.png-99e4943755754ac77ab97fa7355e1059.stex" ]
+source_file="res://Assets/Player/Slug/slug_tileset.png"
+dest_files=[ "res://.import/slug_tileset.png-e6dcfbc79358032e0ac315107fab4da3.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

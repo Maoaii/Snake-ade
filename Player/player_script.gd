@@ -11,6 +11,7 @@ onready var movement_timer = $MovementTimer
 onready var speedup_timer = $SpeedupTimer
 onready var speed_down_timer = $SpeedDownTimer
 onready var tail = preload("res://Player/tail.tscn")
+onready var magnet = preload("res://Player/Magnet.tscn")
 
 # Exported variables for easy testing
 export var movement_speed = 0.2
@@ -18,6 +19,10 @@ export var speedup_time = 5
 export var speedup_speed = 0.1
 export var speeddown_time = 5
 export var speeddown_speed = 0.5
+
+
+
+var magnet_instance
 
 
 # Head and tail scenes
@@ -65,7 +70,6 @@ func update_player_start():
 	head.connect("speed_powerup", self, "plus_speed")
 	head.connect("speed_powerdown", self, "minus_speed")
 	head.connect("magnet_powerup", self, "magnet_powerup")
-	head.connect("half_powerup", self, "half_powerup")
 	
 	# Add head and tails to the player scene
 	get_tree().get_root().get_node("TestLevel").get_node("Player").add_child(head)
@@ -156,18 +160,20 @@ func minus_speed():
 
 # Turns the player's head into a magnet
 func magnet_powerup():
-	pass
+	var magnet_instance = magnet.instance()
+	self.magnet_instance = magnet_instance
+	magnet_instance.connect("magnet_pickup", self, "add_tail")
+	magnet_instance.connect("move_magnet", self, "move_magnet")
+	add_child(magnet_instance)
+	Global.has_magnet = true
 
-
-# Cuts the player's size in half
-func half_powerup():
-	pass
 
 
 # Move the player
 func _on_MovementTimer_timeout():
 	move_player()
-
+	if Global.has_magnet:
+		magnet_instance.set_position(player_body[PLAYER_PARTS["head"]].position) 
 
 # Reset player speed
 func _on_SpeedupTimer_timeout():
@@ -178,8 +184,3 @@ func _on_SpeedupTimer_timeout():
 # Reset player speed
 func _on_SpeedDownTimer_timeout():
 	movement_timer.wait_time = movement_speed
-
-
-# Remove magnet property
-func _on_MagnetTimer_timeout():
-	pass

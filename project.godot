@@ -18,6 +18,7 @@ run/main_scene="res://GameStates/MenuScreen/MenuScreen.tscn"
 Global="*res://GameStates/Global.gd"
 SkinSystem="*res://GameStates/SkinSystem.gd"
 PointSystem="*res://GameStates/PointSystem.gd"
+Highscore="*res://GameStates/highscore.gd"
 
 [debug]
 
@@ -33,7 +34,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [input]
 

@@ -18,9 +18,9 @@ const POINT_CONSUMABLE_SKINS = {
 
 # Dictionary of consumables
 const CONSUMABLES = {
-	0: preload("res://Consumables/SpeedPowerdown.tscn"),
-	1: preload("res://Consumables/MagnetPowerup.tscn"),
-	2: preload("res://Consumables/HalfPowerup.tscn"),
+	0: preload("res://Consumables/SpeedPowerup.tscn"),
+	1: preload("res://Consumables/SpeedPowerdown.tscn"),
+	2: preload("res://Consumables/MagnetPowerup.tscn"),
 }
 const POINT_CONSUMABLE_ASSET = preload("res://Consumables/PointPowerup.tscn")
 
@@ -44,4 +44,9 @@ const PLAYER_DIRECTIONS = {
 	"left": Vector2.LEFT,
 	"right": Vector2.RIGHT,
 }
+
+const filepath = "user://highscore.txt"
+
+
+var has_magnet = false
 
