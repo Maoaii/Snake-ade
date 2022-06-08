@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/quit_button_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameStates/Buttons/quit_button.gd" type="Script" id=2]
+
+[node name="QuitButton" type="Button"]
+self_modulate = Color( 0, 0, 0, 0.207843 )
+margin_right = 78.0
+margin_bottom = 37.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="QuitText" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "quit"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="." to="." method="_on_QuitButton_pressed"]

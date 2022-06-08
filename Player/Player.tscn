@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/player_script.gd" type="Script" id=1]
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+speedup_speed = 0.08
+speeddown_speed = 0.4
+
+[node name="MovementTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="SpeedupTimer" type="Timer" parent="."]
+
+[node name="SpeedDownTimer" type="Timer" parent="."]
+
+[node name="MagnetTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]
+[connection signal="timeout" from="SpeedupTimer" to="." method="_on_SpeedupTimer_timeout"]
+[connection signal="timeout" from="SpeedDownTimer" to="." method="_on_SpeedDownTimer_timeout"]
+[connection signal="timeout" from="MagnetTimer" to="." method="_on_MagnetTimer_timeout"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Player/Snake/snake_tileset.png" type="Texture" id=1]
+[ext_resource path="res://GameStates/Buttons/CharacterPickButtons/character_pick_button.gd" type="Script" id=2]
+
+[node name="SnakePickButton" type="Button"]
+self_modulate = Color( 0.388235, 0.156863, 0.356863, 0.721569 )
+margin_right = 132.0
+margin_bottom = 97.0
+text = "snake"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CharacterPickSprite" type="Sprite" parent="."]
+position = Vector2( 64, 48 )
+texture = ExtResource( 1 )
+
+[connection signal="pressed" from="." to="." method="_on_CharacterPickButton_pressed"]

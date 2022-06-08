@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Consumables/consumables_script.gd" type="Script" id=1]
+
+[node name="Consumables" type="Node2D"]
+script = ExtResource( 1 )
+min_consumable_spawn_time = 3
+max_consumable_spawn_time = 8
+
+[node name="ConsumableSpawner" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="ConsumableSpawner" to="." method="_on_ConsumableSpawner_timeout"]

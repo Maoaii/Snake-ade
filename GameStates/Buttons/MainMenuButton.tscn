@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/start_button_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameStates/Buttons/main_menu_button.gd" type="Script" id=2]
+
+[node name="MainMenuButton" type="Button"]
+self_modulate = Color( 0, 0, 0, 0.207843 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -332.0
+margin_bottom = -448.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StartText" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main Menu"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="." to="." method="_on_MainMenuButton_pressed"]

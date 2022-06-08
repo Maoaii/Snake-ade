@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/start_button_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://GameStates/Levels/points.gd" type="Script" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Consumables/Consumables.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Board/Board.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GameStates/Levels/levels_script.gd" type="Script" id=6]
+[ext_resource path="res://Consumables/HalfPowerup.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 269, 10 )
+
+[node name="TestLevel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="Board" parent="." instance=ExtResource( 5 )]
+anchor_top = 0.0
+margin_top = 0.0
+
+[node name="BoundaryWalls" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TopWall" type="CollisionShape2D" parent="BoundaryWalls"]
+position = Vector2( 250, -11 )
+shape = SubResource( 1 )
+
+[node name="BotWall" type="CollisionShape2D" parent="BoundaryWalls"]
+position = Vector2( 258, 523 )
+shape = SubResource( 1 )
+
+[node name="LeftWall" type="CollisionShape2D" parent="BoundaryWalls"]
+position = Vector2( -11, 257 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="RightWall" type="CollisionShape2D" parent="BoundaryWalls"]
+position = Vector2( 524, 256 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+[node name="Consumables" parent="." instance=ExtResource( 4 )]
+
+[node name="Points" type="Label" parent="."]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = 14.0
+margin_top = 14.0
+margin_right = 195.0
+margin_bottom = 55.0
+custom_fonts/font = ExtResource( 1 )
+text = "Points: XXX
+Modifier: xx"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PointsBG" type="ColorRect" parent="Points"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="HalfPowerup" parent="." instance=ExtResource( 7 )]
+position = Vector2( 271, 78 )
