@@ -15,10 +15,10 @@ run/main_scene="res://GameStates/MenuScreen/MenuScreen.tscn"
 
 [autoload]
 
-Global="*res://GameStates/Global.gd"
-SkinSystem="*res://GameStates/SkinSystem.gd"
-PointSystem="*res://GameStates/PointSystem.gd"
-Highscore="*res://GameStates/highscore.gd"
+Global="*res://GlobalScripts/Global.gd"
+SkinSystem="*res://GlobalScripts/SkinSystem.gd"
+PointSystem="*res://GlobalScripts/PointSystem.gd"
+Highscore="*res://GlobalScripts/highscore.gd"
 
 [debug]
 
