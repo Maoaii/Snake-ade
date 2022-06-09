@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PointPowerup2.wav-8d472a2d1a61addccc9101fed5d1587a.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/ConsumableSounds/PointPowerup2.wav"
+dest_files=[ "res://.import/PointPowerup2.wav-8d472a2d1a61addccc9101fed5d1587a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

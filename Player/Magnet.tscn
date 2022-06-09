@@ -9,7 +9,7 @@ extents = Vector2( 16, 16 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2( 3, 3 )
+scale = Vector2( 4, 4 )
 shape = SubResource( 1 )
 
 [node name="DeathTimer" type="Timer" parent="."]

@@ -10,6 +10,7 @@ const PLAYER_PARTS = {
 onready var movement_timer = $MovementTimer
 onready var speedup_timer = $SpeedupTimer
 onready var speed_down_timer = $SpeedDownTimer
+onready var movement_sound = $MovementSound
 onready var tail = preload("res://Player/tail.tscn")
 onready var magnet = preload("res://Player/Magnet.tscn")
 
@@ -133,7 +134,7 @@ func add_tail():
 	new_tail.position = player_body[player_body.size()- 1].position
 	
 	# Add to the player node
-	get_tree().get_root().get_node("TestLevel").get_node("Player").add_child(new_tail)
+	add_child(new_tail)
 	
 	# Put tail in body array
 	player_body.push_back(new_tail)
@@ -168,12 +169,21 @@ func magnet_powerup():
 	Global.has_magnet = true
 
 
-
 # Move the player
 func _on_MovementTimer_timeout():
 	move_player()
+	# Play movement sound
+	play_movement_sound()
 	if Global.has_magnet:
 		magnet_instance.set_position(player_body[PLAYER_PARTS["head"]].position) 
+
+
+# Play movement sound
+func play_movement_sound():
+	movement_sound.stream = Global.MOVEMENT_SOUNDS[randi() % Global.MOVEMENT_SOUNDS.size()]
+	movement_sound.position = player_body[PLAYER_PARTS["head"]].position
+	movement_sound.play()
+
 
 # Reset player speed
 func _on_SpeedupTimer_timeout():

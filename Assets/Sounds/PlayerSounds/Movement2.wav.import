@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Movement2.wav-250a938be231922e70cb92dc63179dbf.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/PlayerSounds/Movement2.wav"
+dest_files=[ "res://.import/Movement2.wav-250a938be231922e70cb92dc63179dbf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Speedup.wav-c733546e0faf8938bf0304f7eccf8e52.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/ConsumableSounds/Speedup.wav"
+dest_files=[ "res://.import/Speedup.wav-c733546e0faf8938bf0304f7eccf8e52.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -45,6 +45,37 @@ const PLAYER_DIRECTIONS = {
 	"right": Vector2.RIGHT,
 }
 
+# Dictionary of movement sounds
+const MOVEMENT_SOUNDS = {
+	0: preload("res://Assets/Sounds/PlayerSounds/Movement1.wav"),
+}
+
+
+# Dictionary of point powerup sounds
+const POINTPOWERUP_SOUNDS = {
+	0: preload("res://Assets/Sounds/ConsumableSounds/PointPowerup.wav"),
+	1: preload("res://Assets/Sounds/ConsumableSounds/PointPowerup2.wav"),
+}
+
+# Dictionary of speedup sounds
+const SPEEDUP_SOUNDS = {
+	0: preload("res://Assets/Sounds/ConsumableSounds/Speedup.wav"),
+	1: preload("res://Assets/Sounds/ConsumableSounds/Speedup2.wav"),
+}
+
+# Dictionary of speeddown sounds
+const SPEEDDOWN_SOUNDS = {
+	0: preload("res://Assets/Sounds/ConsumableSounds/SpeedDown.wav"),
+	1: preload("res://Assets/Sounds/ConsumableSounds/SpeedDown2.wav"),
+}
+
+# Dictionary of magnet sounds
+const MAGNET_SOUNDS = {
+	0: preload("res://Assets/Sounds/ConsumableSounds/Magnet.wav"),
+	1: preload("res://Assets/Sounds/ConsumableSounds/Magnet2.wav"),
+}
+
+# Highscore tracking filepath
 const filepath = "user://highscore.txt"
 
 

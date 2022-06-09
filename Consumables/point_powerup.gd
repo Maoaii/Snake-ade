@@ -1,5 +1,7 @@
 extends Area2D
 
+onready var consumed_sound = $ConsumedSound
+
 
 func _ready():
 	# Set up point consumable skin
@@ -15,6 +17,7 @@ func get_random_pos():
 
 
 func _on_PointPowerup_area_entered(area):
+	play_consumed_sound()
 	# If it was the player
 	if area.is_in_group("Player"):
 		# Shift place
@@ -22,3 +25,8 @@ func _on_PointPowerup_area_entered(area):
 			position = get_random_pos()
 	if area.name == "Magnet":
 		position = get_random_pos()
+
+
+func play_consumed_sound():
+	consumed_sound.stream = Global.POINTPOWERUP_SOUNDS[randi() % Global.POINTPOWERUP_SOUNDS.size()]
+	consumed_sound.play()

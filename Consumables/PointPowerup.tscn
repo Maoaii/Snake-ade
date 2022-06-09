@@ -15,4 +15,7 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
+[node name="ConsumedSound" type="AudioStreamPlayer2D" parent="."]
+volume_db = -20.0
+
 [connection signal="area_entered" from="." to="." method="_on_PointPowerup_area_entered"]
